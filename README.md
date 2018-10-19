@@ -5,7 +5,7 @@
 
 Submitted by: **Leanna Chisholm**
 
-Time spent: **8** hours spent in total
+Time spent: **13.5** hours spent in total
 
 ## User Stories
 
@@ -14,30 +14,32 @@ The following **required** functionality is complete:
 * [ x ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
 
 The following **optional** features are implemented:
-* [ ] Settings page to change the default tip percentage.
-* [ ] UI animations
+* [  x ] Settings page to change the default tip percentage. *bugs in code - does not switch tax %*
+* [ x ] UI animations  (push screen to settings via segue )
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
 * [ x ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
+- added a dark/light functionality to main settings view
 
-- [ ] List anything else that you can get done to improve the app functionality!
+ 
 
 ## Video Walkthrough 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/HCVwRXm.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/3ZfieTc.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
-
+- using a dedicated mac PC remotely, GIF was a little slow.
 - Ran into issues with outdated actions, outlets, etc. 
 - Issues with having no entry points on storyboards from re-configuring.
 - Storyboard issues with "Exit" object being referenced rather than the view controller.
 - Uninstall/reinstall xcode to start fresh from any issues - FIXED all issues!
+- Cannot seem to get the variable from mthe settingsViewController to the UIviewController. Possibly issues using the new object?
 
 ## License
 
