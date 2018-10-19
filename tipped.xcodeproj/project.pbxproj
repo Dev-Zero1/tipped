@@ -14,6 +14,7 @@
 		C3980FE3217A560500A9AE95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3980FE1217A560500A9AE95 /* LaunchScreen.storyboard */; };
 		C3980FEE217A560500A9AE95 /* tippedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3980FED217A560500A9AE95 /* tippedTests.swift */; };
 		C3980FF9217A560600A9AE95 /* tippedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3980FF8217A560600A9AE95 /* tippedUITests.swift */; };
+		C3981007217A6F1900A9AE95 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3981006217A6F1900A9AE95 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		C3980FF4217A560600A9AE95 /* tippedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tippedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3980FF8217A560600A9AE95 /* tippedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tippedUITests.swift; sourceTree = "<group>"; };
 		C3980FFA217A560600A9AE95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3981006217A6F1900A9AE95 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		C3980FCC217A560400A9AE95 = {
 			isa = PBXGroup;
 			children = (
+				C3981006217A6F1900A9AE95 /* SettingsViewController.swift */,
 				C3980FD7217A560400A9AE95 /* tipped */,
 				C3980FEC217A560500A9AE95 /* tippedTests */,
 				C3980FF7217A560600A9AE95 /* tippedUITests */,
@@ -258,6 +261,7 @@
 			files = (
 				C3980FDB217A560400A9AE95 /* ViewController.swift in Sources */,
 				C3980FD9217A560400A9AE95 /* AppDelegate.swift in Sources */,
+				C3981007217A6F1900A9AE95 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

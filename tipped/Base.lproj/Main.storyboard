@@ -66,6 +66,7 @@
                                     <segment title="18%"/>
                                     <segment title="20%"/>
                                     <segment title="25%"/>
+                                    <segment title="0"/>
                                 </segments>
                                 <color key="tintColor" red="0.093915671009999993" green="0.7279792746" blue="0.25842628829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
@@ -79,6 +80,19 @@
                                 <color key="textColor" red="0.093915671009999993" green="0.7279792746" blue="0.25842628829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <segmentedControl opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="gVP-0o-9Fe">
+                                <rect key="frame" x="238" y="472" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Light"/>
+                                    <segment title="Dark"/>
+                                </segments>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="changeView:" destination="BYZ-38-t0r" eventType="valueChanged" id="BVi-TY-HPh"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -86,12 +100,19 @@
                             <outletCollection property="gestureRecognizers" destination="XKa-u6-00w" appends="YES" id="4Bx-cl-f8q"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="91n-EZ-fP8"/>
+                    <navigationItem key="navigationItem" id="91n-EZ-fP8">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="NZe-TR-xXH">
+                            <connections>
+                                <segue destination="br7-Cq-PJn" kind="push" id="TPa-LI-khz"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="input" destination="u4x-T3-JZf" id="ZGD-94-vTc"/>
                         <outlet property="selection" destination="W2k-pE-PhE" id="XP1-cn-VYf"/>
                         <outlet property="tipLabel" destination="NZP-ua-e8m" id="SO8-Jc-pqr"/>
                         <outlet property="totalLabel" destination="6cF-5Z-dFR" id="jZB-kR-zEU"/>
+                        <outlet property="viewSeg" destination="gVP-0o-9Fe" id="TVr-mq-DrV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -101,7 +122,57 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="354" y="105"/>
+            <point key="canvasLocation" x="-161" y="-289"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Wkw-UA-H0J">
+            <objects>
+                <viewController id="br7-Cq-PJn" customClass="SettingsViewController" customModule="tipped" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xlf-2w-w1X">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="15" maxValue="40" id="u9G-t2-tNL">
+                                <rect key="frame" x="82" y="116" width="227" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.093915671009999993" green="0.7279792746" blue="0.25842628829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="minimumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="thumbTintColor" red="0.093915671009999993" green="0.7279792746" blue="0.25842628829999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="updateCustomTip:" destination="br7-Cq-PJn" eventType="valueChanged" id="eJo-tH-H5l"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OWK-Lf-XEc">
+                                <rect key="frame" x="32" y="116" width="37" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="40%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fG8-EF-zcy">
+                                <rect key="frame" x="319" y="115" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tip %" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sfk-Q1-ACN">
+                                <rect key="frame" x="169" y="138" width="52" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="KohinoorTelugu-Regular" family="Kohinoor Telugu" pointSize="21"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="66v-xM-W4N"/>
+                    <connections>
+                        <outlet property="slider" destination="u9G-t2-tNL" id="cff-cD-pof"/>
+                        <outlet property="tipAmt" destination="sfk-Q1-ACN" id="iAE-PS-eJD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1LD-VA-bdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162" y="470"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XZc-FC-vx8">
@@ -119,7 +190,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8oP-cI-bne" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="78" y="-546"/>
+            <point key="canvasLocation" x="-161" y="-1039"/>
         </scene>
     </scenes>
 </document>
