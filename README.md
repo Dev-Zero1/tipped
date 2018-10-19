@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pre-work - *tipped*
 
 **tipped** is a tip calculator application for iOS.
@@ -53,3 +54,7 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+=======
+# tipped
+iPhone tip Calculator
+>>>>>>> 0467674567e10cbd687e384537993c4861499b36
